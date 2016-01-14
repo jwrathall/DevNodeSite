@@ -1,0 +1,30 @@
+{
+  "name": "mysite",
+  "description": "test site",
+  "main": "app.js",
+  "authors": [
+    "jwrathall"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6"
+  },
+  "overrides": {
+      "bootstrap": {
+          "main": [
+                "dist/js/bootstrap.js",
+                "dist/css/bootstrap.min.css",
+                "less/bootstrap.less"
+              ]
+      }
+  }    
+}
