@@ -17,6 +17,8 @@ var nav = [{
 
 //view the siteRouter, notice the nav param, this is custom for the site router
 var siteRouter = require('./src/routes/siteRoutes.js')(nav);
+var wikiRouter = require('./src/routes/wikiRoutes.js')(nav);
+var adminRouter = require('./src/routes/adminRoutes.js')(nav);
 
 //middleware: used by express first
 //for example if express gets a request for css or js it will look here first
@@ -27,6 +29,8 @@ app.set('views', './src/views');
 app.set('view engine','ejs');
 
 app.use('/sites',siteRouter);
+app.use('/wiki',wikiRouter);
+app.use('/admin', adminRouter);
 
 app.get('/', function(req, res){
    res.render('index', {
