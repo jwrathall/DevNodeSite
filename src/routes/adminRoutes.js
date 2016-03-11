@@ -2,6 +2,33 @@ var express = require('express');
 var adminRouter = express.Router();
 var mongodb = require('mongodb').MongoClient; 
 
+var sites=[
+    {
+        url:'http://webstage.adlibsys.com',
+        title: 'adlib - webstage'
+    },
+    {
+        url:'dev.adlibsys.com',
+        title: 'adlib - local'
+    },
+    {
+        url:'adlibsoftware.com',
+        title: 'adlib - live'
+    },
+    {
+        url:'http://webstage.adlibsys.com/sitecore/login',
+        title: 'sitecore'
+    },
+     {
+        url:'https://vmdcp01/Account/LogOn?ReturnUrl=%2f',
+        title: 'portal - staging'
+    },
+    {
+        url:'http://portal.adlibsoftware.com/',
+        title: 'portal - live'
+    }
+];
+
 var router = function(nav){
     
     adminRouter.route('/addSites')
