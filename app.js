@@ -10,9 +10,6 @@ var nav = [{
             },{
                 Link: '/wiki', 
                 Text: 'Wiki'
-            },{
-                Link: '/About', 
-                Text:'About'
             }];
 
 //view the siteRouter, notice the nav param, this is custom for the site router

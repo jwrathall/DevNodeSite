@@ -16,7 +16,9 @@ var router = function(nav){
                 collection.find().toArray(
                     function(err,results){
                         //this is goig to look in the views dir and for sites (line 12 app.set)
+                       
                         res.render('sites', {
+                            
                                 title: 'Rendered',
                                 //this is the nav that is passed into the function but defined in app.js
                                 nav: nav,
